@@ -93,8 +93,9 @@ function getAllInfoboxes(svgElement) {
 
     // For EACH LOOP FOR "2-9 INFOBOXES AND SEPERATE FOR THE FIRST ONE / ADD STYLING
     infoxbox1.classList.add("infoboxStyles");
-    infoxbox1.addEventListener("click",() => {
+    infoxbox1.addEventListener("click",(event) => {
             
+        event.preventDefault();
         ModalClicked(infoxbox1); 
     }); 
 
@@ -103,8 +104,9 @@ function getAllInfoboxes(svgElement) {
 
         infobox.classList.add("infoboxStyles");
 
-        infobox.addEventListener("click",() => {
+        infobox.addEventListener("click",(event) => {
             
+            event.preventDefault();
             ModalClicked(infobox); 
         }); 
     });
@@ -117,7 +119,18 @@ function animateSVG(svgElement) {
 
     console.log("This is an element inside the svg ",svgElement.getElementById("point1"));
 
-    svgElement.getElementById("header").classList.add("headerIn");
+    let point1Text = svgElement.getElementById("point1").querySelector(".cls-83");
+    let point1Ellipse = svgElement.getElementById("point1").querySelector("ellipse:nth-of-type(1)");
+    let point1Circle = svgElement.querySelector('#trump > circle:nth-child(3)');
+
+    console.log(point1Circle);
+    console.log(point1Ellipse);
+
+    setTimeout(function(){ point1Circle.style.opacity = "1"; }, 1000);
+
+    setTimeout(function(){ point1Ellipse.style.opacity = "1"; }, 1500);
+    
+    setTimeout(function(){ point1Text.style.opacity = "1"; }, 2000);
 
     // Init ScrollMagic
     let controller = new ScrollMagic.Controller();
@@ -356,7 +369,7 @@ function animateSVG(svgElement) {
 // IF CLOSE BUTTON CLICKED
 document.querySelector(".close").addEventListener("click", function(){
 
-    document.querySelector(".modal").style.bottom = "-700px";
+    document.querySelector(".modal").style.bottom = "-1150px";
     document.querySelector(".modal").style.background = "none";
   
   });   

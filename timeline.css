@@ -24,6 +24,18 @@
     margin-right: 10px;
    }
 
+ #point1 .cls-83 {
+  opacity: 0;
+  transition: all 1s ease-out;
+ }  
+ #trump > circle:nth-child(3) {
+  opacity: 0;
+  transition: all 1s ease-out;
+ }
+ #trump > ellipse {
+  opacity: 0;
+  transition: all 1s ease-out;
+ }
 footer {
   display: flex;
   position: fixed;
@@ -107,7 +119,7 @@ footer h1 {
   /*MODAL*/
   .modal {
     position: fixed;
-    bottom: -700px;
+    bottom: -1150px;
     right: 0;
     width: 100%;
     height: 100%;
