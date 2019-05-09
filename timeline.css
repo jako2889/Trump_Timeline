@@ -39,6 +39,7 @@
  #point1 > line {
    opacity: 0;
    transition: all 1s ease-out;
+   transform: translateX(-1000px);
  }
  #trump > g {
   transform: translateY(-10px);

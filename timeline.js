@@ -145,7 +145,7 @@ function animateSVG(svgElement) {
     
     setTimeout(function(){ point1Text.style.opacity = "1"; }, 2000);
 
-    setTimeout(function(){ point1Line.style.opacity = "1"; }, 2500);
+    setTimeout(function(){ point1Line.style.opacity = "1";     point1Line.style.transform = "translateX(0)"; }, 2500);
 
     // Init ScrollMagic
     let controller = new ScrollMagic.Controller();
