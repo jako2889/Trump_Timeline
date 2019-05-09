@@ -36,6 +36,14 @@
   opacity: 0;
   transition: all 1s ease-out;
  }
+ #point1 > line {
+   opacity: 0;
+   transition: all 1s ease-out;
+ }
+ #trump > g {
+  transform: translateY(-10px);
+  transition: all 1s ease-out;
+ }
 footer {
   display: flex;
   position: fixed;
@@ -115,6 +123,43 @@ footer h1 {
         opacity: 1;
     }
 }
+  /*DESCRIPTION BOX*/
+
+  .description_box {
+    position: fixed;
+    top: 35%;
+    left: -225px;
+    transition: 1s;
+    width: 200px;
+    height: 250px;
+    background: #0f1359;
+    box-shadow: 3px 3px 5px 0px rgba(0,0,0,0.75);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+  }
+  .description_box:hover {
+    transform: translateX(-10px)
+  }
+  .description_box h2 {
+    padding: 5px;
+    
+    font-family: var(--main-font);
+
+    font-weight: var(--main-font-weight);
+
+    font-style: var(--main-font-style);
+
+  }
+  .description_box p {
+    padding: 5px;
+    
+    font-family: var(--second-font);
+
+    font-weight: var(--second-font-weight);
+
+    font-style: var(--second-font-style);
+  }
 
   /*MODAL*/
   .modal {

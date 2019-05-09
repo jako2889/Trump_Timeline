@@ -111,6 +111,12 @@ function getAllInfoboxes(svgElement) {
         }); 
     });
 
+    document.querySelector(".description_box").addEventListener("click",(event) => {
+
+        event.preventDefault();
+        document.querySelector(".description_box").style.left = "-225px";
+
+    });
 
 }
 
@@ -119,18 +125,27 @@ function animateSVG(svgElement) {
 
     console.log("This is an element inside the svg ",svgElement.getElementById("point1"));
 
+    
+    setTimeout(function(){ document.querySelector(".description_box").style.left = "0"; }, 3000);
+
     let point1Text = svgElement.getElementById("point1").querySelector(".cls-83");
     let point1Ellipse = svgElement.getElementById("point1").querySelector("ellipse:nth-of-type(1)");
     let point1Circle = svgElement.querySelector('#trump > circle:nth-child(3)');
+    let point1Line = svgElement.querySelector('#point1 > line');
+    let Trump = svgElement.querySelector('#trump > g');
 
     console.log(point1Circle);
     console.log(point1Ellipse);
 
     setTimeout(function(){ point1Circle.style.opacity = "1"; }, 1000);
 
+    setTimeout(function(){ Trump.style.transform = "translateY(0)"; }, 1000);
+
     setTimeout(function(){ point1Ellipse.style.opacity = "1"; }, 1500);
     
     setTimeout(function(){ point1Text.style.opacity = "1"; }, 2000);
+
+    setTimeout(function(){ point1Line.style.opacity = "1"; }, 2500);
 
     // Init ScrollMagic
     let controller = new ScrollMagic.Controller();
@@ -371,6 +386,7 @@ document.querySelector(".close").addEventListener("click", function(){
 
     document.querySelector(".modal").style.bottom = "-1150px";
     document.querySelector(".modal").style.background = "none";
+    
   
   });   
 
@@ -388,12 +404,15 @@ function ModalClicked(infobox) {
 
         if(infoboxNumber === truth.id) {
             console.log("Number",infoboxNumber);
+            document.querySelector(".description_box").style.left = "-225px";
 
             document.querySelector(".title").textContent = truth.title;
             document.querySelector(".text").textContent = truth.text;
             document.querySelector(".source_link").href = truth.source;
             document.querySelector(".image").src = "imgs/Trump" + infoboxNumber + ".jpg";
         }else if(point1Number === truth.id) {
+            document.querySelector(".description_box").style.left = "-225px";
+
             document.querySelector(".title").textContent = truth.title;
             document.querySelector(".text").textContent = truth.text;
             document.querySelector(".source_link").href = truth.source;
