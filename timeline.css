@@ -18,7 +18,6 @@
 #svg_timeline svg {
     width: 100%;
     height: 100%;
-    margin-bottom: 30vw;
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
@@ -45,6 +44,51 @@
   transform: translateY(-10px);
   transition: all 1s ease-out;
  }
+
+ .TheEndLie_con {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30vw;
+  margin-top: 5px;
+  width: 100%;
+ }
+ .TheEndLie_con:hover {
+   opacity: .8;
+ }
+ .TheEndLie_text {
+   width: 500px;
+   cursor: pointer;
+   align-self: center;
+
+   font-family: var(--main-font);
+ 
+   font-weight: var(--main-font-weight);
+ 
+   font-style: var(--main-font-style);
+   letter-spacing: 1.2px;
+ }
+ .TheEndLie_source {
+  width: 500px;
+  align-self: center;
+  text-align: left;
+  padding-top: 25px;
+  color: black;
+  text-decoration: none;
+  font-size: 1.1em;
+
+  font-family: var(--main-font);
+ 
+  font-weight: var(--main-font-weight);
+
+  font-style: var(--main-font-style);
+ }
+ .TheEndLie_con hr {
+  width: 500px;
+  align-self: center;
+  height: 3px;
+  background-color: #0f1359;
+ }
+
 footer {
   display: flex;
   position: fixed;
@@ -88,6 +132,10 @@ footer h1 {
   transform: translateX(50px);
   transition: all 1s ease-out;
 }
+.Up {
+  transform: translateY(100px);
+  transition: all 1s ease-out;
+}
 
 /*Scroll classes animation / End*/
 .infoboxStyles {
@@ -103,6 +151,10 @@ footer h1 {
 }
 .skewRight {
   transform: translateX(0);
+}
+.skewUp {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .dateAnimation {

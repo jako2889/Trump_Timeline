@@ -111,12 +111,33 @@ function getAllInfoboxes(svgElement) {
         }); 
     });
 
+    EventhandleFunction();
+
+}
+
+function EventhandleFunction() {
+
     document.querySelector(".description_box").addEventListener("click",(event) => {
 
         event.preventDefault();
         document.querySelector(".description_box").style.left = "-225px";
 
     });
+
+    document.querySelector(".TheEndLie_text").addEventListener("click", () => {
+
+        window.location.href = 'https://www.washingtonpost.com/politics/2018/11/02/president-trump-has-made-false-or-misleading-claims-over-days/?utm_term=.505062c25770';
+
+    });
+
+    // IF CLOSE BUTTON CLICKED
+document.querySelector(".close").addEventListener("click", function(){
+
+    document.querySelector(".modal").style.bottom = "-1150px";
+    document.querySelector(".modal").style.background = "none";
+    
+  
+  });  
 
 }
 
@@ -378,17 +399,17 @@ function animateSVG(svgElement) {
     })
     .setClassToggle("#point10", "dateAnimation") // Adds class to point10
     .addTo(controller);
+    let point10_info = new ScrollMagic.Scene({
+
+        triggerElement: "#point10"
+    
+    })
+    .setClassToggle(".TheEndLie_con", "skewUp") // Adds class to point10
+    .addTo(controller);
 
 }
+ 
 
-// IF CLOSE BUTTON CLICKED
-document.querySelector(".close").addEventListener("click", function(){
-
-    document.querySelector(".modal").style.bottom = "-1150px";
-    document.querySelector(".modal").style.background = "none";
-    
-  
-  });   
 
 function ModalClicked(infobox) {
 

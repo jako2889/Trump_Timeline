@@ -1,0 +1,25 @@
+{
+  "name": "trump_timelinereal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "timeline.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "minify-js": "minify timeline.js > dist/timeline.min.js",
+    "minify-html": "minify index.html > dist/index.html",
+    "minify-css": "minify timeline.css > dist/timeline.min.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jako2889/Trump_Timeline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jako2889/Trump_Timeline/issues"
+  },
+  "homepage": "https://github.com/jako2889/Trump_Timeline#readme",
+  "devDependencies": {
+    "minify": "^4.1.1"
+  }
+}
